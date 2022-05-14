@@ -15,7 +15,7 @@ let selectedDate = '';
 
 refs.btnStart.setAttribute('disabled', true);
 
-const config = {
+const options = {
     enableTime: true,
     time_24hr: true,
     defaultDate: new Date(),
@@ -27,10 +27,10 @@ const config = {
     },
 };
 
-flatpickr('#datetime-picker', config);
+flatpickr('#datetime-picker', options);
 
 function checkValidDate(date) {
-    if (date < config.defaultDate) {
+    if (date < options.defaultDate) {
         Notify.failure('Please choose a date in the future', {
             timeout: 1300,
             showOnlyTheLastOne: true,
