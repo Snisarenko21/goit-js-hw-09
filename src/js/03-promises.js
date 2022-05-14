@@ -22,16 +22,16 @@ function onsubmit(e) {
   const firstDelay = Number(formEl.delay.value);
   const stepDelay = Number(formEl.step.value);
   const amountPromises = Number(formEl.amount.value);
-  let startDelay = firstDelay;
+  let numDelay = firstDelay;
 
-  if (startDelay <= 0) {
+  if (numDelay <= 0) {
     return;
   }
 
   for (let i = 0; i < amountPromises; i += 1) {
-    let startPosition = i + 1;
+    let numPosition = i + 1;
 
-    createPromise(startPosition, startDelay)
+    createPromise(numPosition, numDelay)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`, {
           clickToClose: true,
