@@ -43,6 +43,6 @@ function onsubmit(e) {
         });
       });
 
-    startDelay += stepDelay;
+    numDelay += stepDelay;
   }
 }
