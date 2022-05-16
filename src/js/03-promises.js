@@ -45,6 +45,6 @@ function onsubmit(e) {
         });
       });
 
-    screen= stepDelay;
+    numDelay += stepDelay;
   }
 }
